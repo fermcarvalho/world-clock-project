@@ -24,6 +24,58 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  // New York
+  let newYorkElement = document.querySelector("#new-york");
+  if (newYorkElement) {
+    let newYorkDateElement = newYorkElement.querySelector(".date");
+    let newYorkTimeElement = newYorkElement.querySelector(".time");
+    let newYorkTime = moment().tz("American/New_York");
+
+    newYorkDateElement.innerHTML = newYorkTime.format("MMMM	Do YYYY");
+    newYorkTimeElement.innerHTML = newYorkTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM	Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Sydney
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney");
+
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM	Do YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Sao Paulo
+  let saoPauloElement = document.querySelector("#sao-paulo");
+  if (saoPauloElement) {
+    let saoPauloDateElement = saoPauloElement.querySelector(".date");
+    let saoPauloTimeElement = saoPauloElement.querySelector(".time");
+    let saoPauloTime = moment().tz("America/Sao_Paulo");
+
+    saoPauloDateElement.innerHTML = saoPauloTime.format("MMMM	Do YYYY");
+    saoPauloTimeElement.innerHTML = saoPauloTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
